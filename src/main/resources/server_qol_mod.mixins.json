@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "de.olivermakesco.server_qol_mod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "Mixin_EndDragonFight",
+    "Mixin_EnderMan_EndermanTakeBlockGoal",
+    "Mixin_Level",
+    "Mixin_Player",
+    "Mixin_ServerPlayer"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
