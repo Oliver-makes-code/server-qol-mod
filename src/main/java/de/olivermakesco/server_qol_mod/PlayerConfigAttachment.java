@@ -2,10 +2,7 @@ package de.olivermakesco.server_qol_mod;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
-
-import java.util.function.Consumer;
 
 public class PlayerConfigAttachment {
     public static final Codec<PlayerConfigAttachment> CODEC = RecordCodecBuilder.create(instance -> instance
