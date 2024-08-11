@@ -7,6 +7,7 @@
     "Mixin_AnvilMenu",
     "Mixin_EndDragonFight",
     "Mixin_EnderMan_EndermanTakeBlockGoal",
+    "Mixin_ItemStack",
     "Mixin_Level",
     "Mixin_Player",
     "Mixin_ServerPlayer"
