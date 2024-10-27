@@ -17,6 +17,8 @@ public class ModGamerules {
     }
 
     public static boolean getBoolean(GameRules.Key<GameRules.BooleanValue> rule) {
+        if (ServerQolMod.serverInstance == null)
+                return false;
         return ServerQolMod.serverInstance.getGameRules().getBoolean(rule);
     }
 

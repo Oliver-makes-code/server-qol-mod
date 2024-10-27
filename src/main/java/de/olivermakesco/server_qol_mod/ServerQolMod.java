@@ -29,7 +29,7 @@ public class ServerQolMod implements ModInitializer {
         CommandRegistrationCallback.EVENT.register(ModCommands::register);
         ModGamerules.init();
 
-        ServerLifecycleEvents.SERVER_STARTED.register((server) -> {
+        ServerLifecycleEvents.SERVER_STARTING.register((server) -> {
             serverInstance = server;
         });
 
