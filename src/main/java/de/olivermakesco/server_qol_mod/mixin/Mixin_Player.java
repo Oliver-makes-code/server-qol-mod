@@ -2,6 +2,7 @@ package de.olivermakesco.server_qol_mod.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import de.olivermakesco.server_qol_mod.ModGamerules;
 import de.olivermakesco.server_qol_mod.PlayerConfigAttachment;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.GameRules;
@@ -18,6 +19,9 @@ public class Mixin_Player {
             )
     )
     private boolean dropEquipment_checkKeepInventory(GameRules instance, GameRules.Key<GameRules.BooleanValue> key, Operation<Boolean> original) {
+        if (!ModGamerules.getBoolean(ModGamerules.PER_PLAYER_KEEP_INVENTORY))
+            return original.call(instance, key);
+
         var self = (Player)(Object)this;
 
         if (key == GameRules.RULE_KEEPINVENTORY && PlayerConfigAttachment.get(self).shouldKeepInventory)
@@ -34,6 +38,9 @@ public class Mixin_Player {
             )
     )
     private boolean getBaseExperienceReward_checkKeepInventory(GameRules instance, GameRules.Key<GameRules.BooleanValue> key, Operation<Boolean> original) {
+        if (!ModGamerules.getBoolean(ModGamerules.PER_PLAYER_KEEP_INVENTORY))
+            return original.call(instance, key);
+
         var self = (Player)(Object)this;
 
         if (key == GameRules.RULE_KEEPINVENTORY && PlayerConfigAttachment.get(self).shouldKeepInventory)

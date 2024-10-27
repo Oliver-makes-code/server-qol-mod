@@ -4,8 +4,10 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.item.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +15,7 @@ import org.slf4j.LoggerFactory;
 public class ServerQolMod implements ModInitializer {
     public static final String MODID = "server_qol_mod";
     public static final Logger LOG = LoggerFactory.getLogger(MODID);
+    public static MinecraftServer serverInstance;
 
     @SuppressWarnings("UnstableApiUsage")
     public static final AttachmentType<PlayerConfigAttachment> PLAYER_CONFIG_TYPE = AttachmentRegistry.<PlayerConfigAttachment>builder()
@@ -24,8 +27,16 @@ public class ServerQolMod implements ModInitializer {
     @Override
     public void onInitialize() {
         CommandRegistrationCallback.EVENT.register(ModCommands::register);
+        ModGamerules.init();
+
+        ServerLifecycleEvents.SERVER_STARTED.register((server) -> {
+            serverInstance = server;
+        });
 
         ItemDefaultInstanceModification.add(stack -> {
+            if (!ModGamerules.getBoolean(ModGamerules.STACKABLE_ITEMS))
+                return;
+
             if (
                     stack.is(Items.POTION) ||
                     stack.is(Items.LINGERING_POTION) ||

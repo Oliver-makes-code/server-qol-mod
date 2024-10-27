@@ -45,6 +45,11 @@ public class ModCommands {
     }
 
     private static int getKeepInventory(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
+        if (!ModGamerules.getBoolean(ModGamerules.PER_PLAYER_KEEP_INVENTORY)) {
+            context.getSource().sendFailure(Component.literal("Per-player keep inventory is disabled."));
+            return -1;
+        }
+
         var player = context.getSource().getPlayerOrException();
 
         var conf = PlayerConfigAttachment.get(player);
@@ -55,6 +60,11 @@ public class ModCommands {
     }
 
     private static int setPvp(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
+        if (!ModGamerules.getBoolean(ModGamerules.PER_PLAYER_PVP)) {
+            context.getSource().sendFailure(Component.literal("Per-player pvp is disabled."));
+            return -1;
+        }
+
         var player = context.getSource().getPlayerOrException();
         var value = BoolArgumentType.getBool(context, "value");
 
@@ -69,6 +79,11 @@ public class ModCommands {
     }
 
     private static int setKeepInventory(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
+        if (!ModGamerules.getBoolean(ModGamerules.PER_PLAYER_KEEP_INVENTORY)) {
+            context.getSource().sendFailure(Component.literal("Per-player keep inventory is disabled."));
+            return -1;
+        }
+
         var player = context.getSource().getPlayerOrException();
         var value = BoolArgumentType.getBool(context, "value");
 
