@@ -1,0 +1,19 @@
+{
+  "replace": true,
+  "values": [
+    "#minecraft:boats",
+    "#minecraft:chest_boats",
+    "minecraft:saddle",
+    "minecraft:minecart",
+    "minecraft:chest_minecart",
+    "minecraft:command_block_minecart",
+    "minecraft:furnace_minecart",
+    "minecraft:hopper_minecart",
+    "minecraft:tnt_minecart",
+    "minecraft:potion",
+    "minecraft:splash_potion",
+    "minecraft:lingering_potion",
+    "#c:music_discs",
+    "#c:buckets"
+  ]
+}
