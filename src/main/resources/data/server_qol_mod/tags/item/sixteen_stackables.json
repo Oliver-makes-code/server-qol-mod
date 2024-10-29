@@ -1,5 +1,4 @@
 {
-  "replace": true,
   "values": [
     "#minecraft:boats",
     "#minecraft:chest_boats",
@@ -14,6 +13,33 @@
     "minecraft:splash_potion",
     "minecraft:lingering_potion",
     "#c:music_discs",
-    "#c:buckets"
+    "#c:buckets",
+
+    "leather_horse_armor",
+    "golden_horse_armor",
+    "iron_horse_armor",
+    "diamond_horse_armor",
+
+    "mojang_banner_pattern",
+    "guster_banner_pattern",
+    "field_masoned_banner_pattern",
+    "creeper_banner_pattern",
+    "flow_banner_pattern",
+    "flower_banner_pattern",
+    "piglin_banner_pattern",
+    "globe_banner_pattern",
+    "skull_banner_pattern",
+    "bordure_indented_banner_pattern",
+
+    "enchanted_book",
+
+    "cake",
+
+    "mushroom_stew",
+    "beetroot_soup",
+    "rabbit_stew",
+    "suspicious_stew",
+
+    "goat_horn"
   ]
 }
