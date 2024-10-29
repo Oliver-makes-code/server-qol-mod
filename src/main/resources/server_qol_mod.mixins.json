@@ -3,11 +3,12 @@
   "package": "de.olivermakesco.server_qol_mod.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "Mixin_AnvilMenu",
     "Mixin_EndDragonFight",
     "Mixin_EnderMan_EndermanTakeBlockGoal",
     "Mixin_ItemStack",
-    "Mixin_ServerLevel",
     "Mixin_Player",
+    "Mixin_ServerLevel",
     "Mixin_ServerPlayer"
   ],
   "injectors": {
