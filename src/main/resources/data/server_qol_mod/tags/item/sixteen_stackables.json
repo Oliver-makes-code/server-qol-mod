@@ -15,31 +15,34 @@
     "#c:music_discs",
     "#c:buckets",
 
-    "leather_horse_armor",
-    "golden_horse_armor",
-    "iron_horse_armor",
-    "diamond_horse_armor",
+    "minecraft:leather_horse_armor",
+    "minecraft:golden_horse_armor",
+    "minecraft:iron_horse_armor",
+    "minecraft:diamond_horse_armor",
 
-    "mojang_banner_pattern",
-    "guster_banner_pattern",
-    "field_masoned_banner_pattern",
-    "creeper_banner_pattern",
-    "flow_banner_pattern",
-    "flower_banner_pattern",
-    "piglin_banner_pattern",
-    "globe_banner_pattern",
-    "skull_banner_pattern",
-    "bordure_indented_banner_pattern",
+    "minecraft:mojang_banner_pattern",
+    "minecraft:guster_banner_pattern",
+    "minecraft:field_masoned_banner_pattern",
+    "minecraft:creeper_banner_pattern",
+    "minecraft:flow_banner_pattern",
+    "minecraft:flower_banner_pattern",
+    "minecraft:piglin_banner_pattern",
+    "minecraft:globe_banner_pattern",
+    "minecraft:skull_banner_pattern",
+    "minecraft:bordure_indented_banner_pattern",
 
-    "enchanted_book",
+    "minecraft:enchanted_book",
 
-    "cake",
+    "minecraft:cake",
 
-    "mushroom_stew",
-    "beetroot_soup",
-    "rabbit_stew",
-    "suspicious_stew",
+    "minecraft:mushroom_stew",
+    "minecraft:beetroot_soup",
+    "minecraft:rabbit_stew",
+    "minecraft:suspicious_stew",
 
-    "goat_horn"
+    "minecraft:goat_horn",
+
+    "#minecraft:beds",
+    "minecraft:shulker_box"
   ]
 }
